@@ -1,15 +1,15 @@
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: user1-RoleBinding
+  name: chaitanya-RoleBinding
   namespace: development
 subjects:
 - kind: User
-  name: user1
+  name: chaitanya
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
-  name: user1-role
+  name: chaitanya-role
   apiGroup: rbac.authorization.k8s.io 
 
 ---
@@ -17,14 +17,16 @@ roleRef:
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: user2-RoleBinding
+  name: rama-RoleBinding
   namespace: production
 subjects:
 - kind: User
-  name: user2
+  name: rama
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
-  name: user2-role
+  name: rama-role
   apiGroup: rbac.authorization.k8s.io 
+
+
 

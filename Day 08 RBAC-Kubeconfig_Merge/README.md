@@ -39,9 +39,9 @@ Copy the following files from the master to the management server:
 Generate the key and certificate:
 
 ```bash
-openssl genrsa -out saikiran.key 2048
-openssl req -new -key saikiran.key -out saikiran.csr -subj "/CN=saikiran/O=clusteradmin"
-openssl x509 -req -in saikiran.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out saikiran.crt -days 365
+openssl genrsa -out chaitanya.key 2048
+openssl req -new -key chaitanya.key -out chaitanya.csr -subj "/CN=chaitanya/O=development"
+openssl x509 -req -in chaitanya.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out chaitanya.crt -days 365
 ```
 
 #### User 2: `user2`
@@ -49,9 +49,9 @@ openssl x509 -req -in saikiran.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out
 Generate the key and certificate:
 
 ```bash
-openssl genrsa -out user2.key 2048
-openssl req -new -key user2.key -out user2.csr -subj "/CN=user2/O=production"
-openssl x509 -req -in user2.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out user2.crt -days 365
+openssl genrsa -out rama.key 2048
+openssl req -new -key rama.key -out rama.csr -subj "/CN=rama/O=production"
+openssl x509 -req -in rama.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out rama.crt -days 365
 ```
 
 ### 5. Copy Certificates and Keys
@@ -85,7 +85,7 @@ For the administrator `saikiran`:
 
 ```bash
 openssl genrsa -out saikiran.key 2048
-openssl req -new -key saikiran.key -out saikiran.csr -subj "/CN=saikiran/O=development"
+openssl req -new -key saikiran.key -out saikiran.csr -subj "/CN=saikiran/O=clusteradmin"
 openssl x509 -req -in saikiran.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out saikiran.crt -days 365
 ```
 
@@ -105,3 +105,13 @@ To combine multiple config files into one:
 export KUBECONFIG=USER1-CONFIG:USER2-CONFIG:SAIKIRAN-CONFIG
 kubectl config view --merge --flatten > mixed-config.txt
 ```
+
+
+
+installation of kubens and kubectx:
+
+sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
+sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
+echo "source /opt/kubectx/completion/kubectx.bash" >> ~/.bashrc
+echo "source /opt/kubectx/completion/kubens.bash" >> ~/.bashrc
