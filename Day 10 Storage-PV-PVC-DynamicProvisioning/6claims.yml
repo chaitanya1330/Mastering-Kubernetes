@@ -43,4 +43,4 @@ spec:
         persistentVolumeClaim:
            claimName: task-pv-claim4
       nodeSelector:
-          kubernetes.io/hostname: i-0eabc073991b3166c
+          kubernetes.io/hostname: i-082fdb2385af6107d

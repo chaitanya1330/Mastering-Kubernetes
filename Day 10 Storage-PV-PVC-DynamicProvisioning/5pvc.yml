@@ -57,3 +57,17 @@ spec:
   resources:
     requests:
       storage: 8Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: task-pv-claim5
+spec:
+  storageClassName: gp2
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+

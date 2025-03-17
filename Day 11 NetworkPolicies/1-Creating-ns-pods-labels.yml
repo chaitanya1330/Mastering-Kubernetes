@@ -24,10 +24,10 @@ alias allpods='ku get po -n prod -o wide --no-headers && ku get po -n dev -o wid
 
 
 
-ku exec -it  prod1 -n prod -- ping -c 3  100.106.150.83 \
-&& ku exec -it  prod2 -n prod -- ping -c 3  100.97.52.10 \
-&& ku exec -it  prod1 -n prod -- ping -c 3   100.106.150.84     \
-&& ku exec -it  prod2 -n prod -- ping -c 3   100.99.93.24
+ku exec -it  prod1 -n prod -- ping -c 3  100.112.255.133 \
+&& ku exec -it  prod2 -n prod -- ping -c 3  100.102.92.70 \
+&& ku exec -it  prod1 -n prod -- ping -c 3   100.112.255.134     \
+&& ku exec -it  prod2 -n prod -- ping -c 3   100.102.92.71
 
 
 ku exec -it  dev1 -n dev -- ping -c 3    100.106.150.84 \

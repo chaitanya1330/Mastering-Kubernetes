@@ -12,7 +12,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   awsElasticBlockStore:
-    volumeID: vol-0d583b79033e9dfa2
+    volumeID: vol-0940dca772cfcf8cd
     fsType: ext4
 
 ---
@@ -30,7 +30,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   awsElasticBlockStore:
-    volumeID: vol-03383941a331ed8aa
+    volumeID: vol-0fe5b2a3bba457d77
     fsType: ext4
 
 ---
@@ -48,7 +48,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   awsElasticBlockStore:
-    volumeID: vol-05c109790d96ccbed
+    volumeID: vol-0807c0129f0ba368b
     fsType: ext4
 
 ---
@@ -66,7 +66,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   awsElasticBlockStore:
-    volumeID: vol-07d7e78d1a0c3e62a
+    volumeID: vol-03e01d90989cbf9d3
     fsType: ext4
 
 ---
@@ -84,10 +84,11 @@ spec:
   accessModes:
   - ReadWriteOnce
   awsElasticBlockStore:
-    volumeID: vol-0d0864d2cf3cef1c1
+    volumeID: vol-0ca39f5e0eccff3bd
     fsType: ext4
 
 
 
 
-# aws ec2 create-volume --volume-type gp2 --size 2 --availability-zone us-east-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=cloudvishwakarma.in},{Key=Name,Value=aws-pv1}]' && aws ec2 create-volume --volume-type gp2 --size 4 --availability-zone us-east-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=cloudvishwakarma.in},{Key=Name,Value=aws-pv2}]' && aws ec2 create-volume --volume-type gp2 --size 6 --availability-zone us-east-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=cloudvishwakarma.in},{Key=Name,Value=aws-pv3}]' && aws ec2 create-volume --volume-type gp2 --size 8 --availability-zone us-east-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=cloudvishwakarma.in},{Key=Name,Value=aws-pv4}]' && aws ec2 create-volume --volume-type gp2 --size 10 --availability-zone us-east-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=cloudvishwakarma.in},{Key=Name,Value=aws-pv5}]'
+
+# aws ec2 create-volume --volume-type gp2 --size 2 --availability-zone ap-south-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=chaitanya.xyz},{Key=Name,Value=aws-pv1}]' && aws ec2 create-volume --volume-type gp2 --size 4 --availability-zone ap-south-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=chaitanya.xyz},{Key=Name,Value=aws-pv2}]' && aws ec2 create-volume --volume-type gp2 --size 6 --availability-zone ap-south-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=chaitanya.xyz},{Key=Name,Value=aws-pv3}]' && aws ec2 create-volume --volume-type gp2 --size 8 --availability-zone ap-south-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=chaitanya.xyz},{Key=Name,Value=aws-pv4}]' && aws ec2 create-volume --volume-type gp2 --size 10 --availability-zone ap-south-1a --tag-specifications 'ResourceType=volume,Tags=[{Key=KubernetesCluster,Value=chaitanya.xyz},{Key=Name,Value=aws-pv5}]'
