@@ -17,5 +17,5 @@ spec:
       containers:
       - image: kiran2361993/troubleshootingtools:v1
         name: votingapp
-      # imagePullSecrets:
-      # - name: docker-pwd
+      imagePullSecrets:
+      - name: docker-pwd
